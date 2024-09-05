@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<circuit>
+  <version>2</version>
+  <attributes/>
+  <visualElements>
+    <visualElement>
+      <elementName>External</elementName>
+      <elementAttributes>
+        <entry>
+          <string>Label</string>
+          <string>hw</string>
+        </entry>
+        <entry>
+          <string>applicationType</string>
+          <appType>GHDL</appType>
+        </entry>
+        <entry>
+          <string>externalInputs</string>
+          <string>A,B</string>
+        </entry>
+        <entry>
+          <string>Code</string>
+          <string>library ieee;
+use IEEE.std_logic_1164.all;
+
+entity hw is
+    port(
+        A: in STD_LOGIC;
+        B: in STD_LOGIC;
+        S: out STD_LOGIC
+    );
+end hw;
+
+architecture comportamento of hw is
+begin
+    S &lt;= A and B;
+end comportamento;</string>
+        </entry>
+        <entry>
+          <string>externalOutputs</string>
+          <string>S</string>
+        </entry>
+      </elementAttributes>
+      <pos x="460" y="220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes/>
+      <pos x="420" y="220"/>
+    </visualElement>
+    <visualElement>
+      <elementName>In</elementName>
+      <elementAttributes/>
+      <pos x="420" y="260"/>
+    </visualElement>
+    <visualElement>
+      <elementName>LED</elementName>
+      <elementAttributes/>
+      <pos x="560" y="240"/>
+    </visualElement>
+  </visualElements>
+  <wires>
+    <wire>
+      <p1 x="520" y="240"/>
+      <p2 x="560" y="240"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="260"/>
+      <p2 x="460" y="260"/>
+    </wire>
+    <wire>
+      <p1 x="420" y="220"/>
+      <p2 x="460" y="220"/>
+    </wire>
+  </wires>
+  <measurementOrdering/>
+</circuit>
